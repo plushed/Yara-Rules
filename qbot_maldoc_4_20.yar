@@ -21,6 +21,5 @@ rule qbot_maldoc_4_20 {
       $s8 = "word/media/image1.jpeg" fullword ascii
       $s9 = "ACD Systems Digital Imaging" fullword ascii
    condition:
-      ( uint16(0) == 0x4b50 and filesize < 500KB and ( 9 of them )
-      ) or ( all of them )
+      ( uint16(0) == 0x4b50 and filesize < 500KB and all of them )
 }
