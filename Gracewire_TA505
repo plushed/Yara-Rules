@@ -1,4 +1,4 @@
-rule ta505 {
+rule gracewire_ta505 {
   strings:
     $s0 = "C++ java" ascii wide
   
