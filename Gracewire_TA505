@@ -1,0 +1,9 @@
+rule ta505 {
+  strings:
+    $s0 = "C++ java" ascii wide
+  
+  condition:
+		uint16(0) == 0x5A4D and
+		uint8(uint32(0x3c)+23) == 0x21 and
+		all of ($s*)
+}
